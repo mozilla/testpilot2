@@ -30,3 +30,9 @@ exports.test_open_tab = function(test) {
   });
   test.waitUntilDone(20000);
 };
+
+
+exports.test_run_main = function(test) {
+    main.main();
+    test.waitUntilDone(20000);
+}
