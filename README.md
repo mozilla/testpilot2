@@ -18,6 +18,11 @@ See `docs/` for more info!
 3. fork and clone
 4. cfx run
 
+To see it in action:
+
+    make prep
+    cfx run    
+
 ## dev ##
 
 please use git flow like workflow:
@@ -31,6 +36,10 @@ please use git flow like workflow:
   $ git push -A upstream
  
 * `brew install git-flow` can help.
+
+To setup build:
+
+    `pip install -f requirements-build.txt`
 
 ## test ##
 
