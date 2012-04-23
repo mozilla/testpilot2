@@ -1,6 +1,6 @@
 TOP ?= $(shell pwd)
 
-EXAMPLE_XPIS = heartbeat
+EXAMPLE_XPIS = heartbeat foursearches
 
 help:
 	@echo 'some targets are in the make file, some stuff is in `cfx`'
