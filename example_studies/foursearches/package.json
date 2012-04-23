@@ -1,0 +1,9 @@
+{
+    "name": "foursearches",
+    "license": "MPL 2.0",
+    "author": "Gregg Lind <gregg.lind@mozilla.com>",
+    "version": "0.1",
+    "fullName": "foursearches",
+    "id": "foursearches@testpilot.mozilla.com",
+    "description": "four searches, a testpilot2 example study"
+}
