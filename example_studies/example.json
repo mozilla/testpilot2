@@ -6,6 +6,13 @@
          "upload": 10,
          "summary":  "this is the heartbeat study",
          "observe": ["heartbeat"]
+        },
+        {"name": "foursearches",
+         "addons": ["/example/foursearches.xpi"],
+         "duration": 7,
+         "upload": 10,
+         "summary":  "four kinds of searches",
+         "observe": ["foursearches"]
         }
     ],
     "simplesurveys": [
