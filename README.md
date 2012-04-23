@@ -1,13 +1,13 @@
-= Test Pilot 2 =
+# Test Pilot 2 #
 
-== about ==
+## about ##
 
 Restartless add-on version of Test Pilot (https://testpilot.mozillalabs.com/)
 with more features and a simpler api.
 
 See `docs/` for more info!
 
-== install ==
+## install ##
 
 1. use the mozilla addon-sdk (also known as jetpack):  
    
@@ -18,7 +18,7 @@ See `docs/` for more info!
 3. fork and clone
 4. cfx run
 
-== dev ==
+## dev ##
 
 please use git flow like workflow:
 
@@ -32,22 +32,22 @@ please use git flow like workflow:
  
 * `brew install git-flow` can help.
 
-== test ==
+## test ##
 
     cfx test          
 
-== bugs, feature requests ==
+## bugs, feature requests ##
 
 use github issues.  We don't have bugzilla integration running yet.
 
-== inclusion ==
+## inclusion ##
 
 Test Pilot needs your help as a champion, experimental subject, or coder.
 Whatever your background (nation, language, neurotypical status, physical
 ability, sex, gender, orientation, age), you are welcome, and will be
 treated profressionally, respected, and valued.   
 
-== Awesome Ascii Logo ==
+## Awesome Ascii Logo ##
 
     _____  ____  __  _____      ___   _   _     ___  _____     ___  
      | |  | |_  ( (`  | |      | |_) | | | |   / / \  | |       ) ) 
