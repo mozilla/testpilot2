@@ -1,0 +1,18 @@
+{
+    "experiments": [
+        {"name": "heartbeat",
+         "addons": ["/example/heartbeat.xpi"],
+         "duration": 7,
+         "upload": 10,
+         "summary":  "this is the heartbeat study",
+         "observe": ["heartbeat"]
+        }
+    ],
+    "simplesurveys": [
+        {"name":  "newtestpilotsurvey",
+        "summary":  "Trying to figure out what people think of TP2",
+        "url":  "https://gist.github.com/2467628",
+        "phonehome": "http://some.evil.com/persontooksurvey"
+        }
+    ]
+}
