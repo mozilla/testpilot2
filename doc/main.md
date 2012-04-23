@@ -1,3 +1,3 @@
-= Testpilot docs =
+# Main Testpilot docs #
 
 see the tutorial

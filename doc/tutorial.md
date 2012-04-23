@@ -1,6 +1,6 @@
-=Tutorial=
+#TP2 Tutorial and Examples#
 
-==FAQ==
+##FAQ##
 
 #.  What are the big ideas?
 
@@ -64,12 +64,12 @@ Example Complicated 'index.json' showing off the features:
     {}
 
 
-== Getting Experiements ==
+## Getting Experiements ##
 
 Exceperiments come in off a json feed, which is loaded an parsed on testpilot startup,
 (and at other times, TBD, including forced refresh, daily?)
 
-=== Constructing the experiements.json ===
+## Constructing the experiements.json ###
 
 options:
 
