@@ -1,0 +1,9 @@
+{
+    "name": "heartbeat", 
+    "license": "MPL 2.0", 
+    "author": "Gregg Lind <gregg.lind@mozilla.com>", 
+    "version": "1.0", 
+    "fullName": "heartbeat", 
+    "id": "heartbeat@testpilot.mozilla.org", 
+    "description": "sends a message to observer very X seconds"
+}
