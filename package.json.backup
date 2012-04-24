@@ -1,8 +1,0 @@
-{
-  "name": "testpilot2",
-  "fullName": "testpilot2",
-  "description": "run interface studies, surveys, etc.",
-  "author": "Gregg Lind <gregg.lind@mozilla.com>",
-  "license": "MPL 2.0",
-  "version": "2.0"
-}
