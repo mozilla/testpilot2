@@ -4,7 +4,7 @@
 
 const observer = require("observer-service");
 const timers = require("timers");
-var interval = 1000;  // 500 ms.
+var interval = 10000;  // in ms
 
 
 /* 
