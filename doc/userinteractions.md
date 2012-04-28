@@ -3,15 +3,16 @@ User Interactions
                                   
 Census of User Interactions with Test Pilot.
 
-*   install the addon  OR  it is bundles.  
-*   turn on / accept the addon
+*   setup:
+    -  (if bundled), accept the global telemetry login  OR 
+    -  install the addon the addon
 *   at beginning of study
     - install other addons
     - 'accept' a study
     - do an external survey
 *   during study
     - see / plot collected data 
-*   end of study
+*   end of study [see below]
     - upload data?
     - "restore" ui to before (uninstall addons)
 *   anytime
@@ -19,7 +20,23 @@ Census of User Interactions with Test Pilot.
     - "clear" all data? 
 *   uninstall tp / disable
     - clear all data and prefs?
+
     
+### end of study
+
+When a study ends, we need to collect data, and revert the ui.
+
+choices might be (but this is probably too many)
+
+* "submit"
+* "don't submit, and delete" 
+* "show me first"
+* "submit, and always submit without asking from now on" 
+* "ask me later"
+
+Perhaps we can *always show* a few lines of data, then offer to show more?
+
+
 notification options
 ---------------------
 
@@ -48,3 +65,4 @@ Unanswered questions...
 *   should there be menu items?  Addons?  Should it just be a tab?
 *   should this all be in the about:testpilot namespace, using
     https://github.com/Gozala/jetpack-protocol
+    
