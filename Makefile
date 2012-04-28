@@ -10,9 +10,10 @@ docs:
 	@cd doc && rm -rf build  && d
 	@echo "docs at doc/build"
 
-servedocs: docs 
-	cd doc/build && python -m SimpleHTTPServer 8118 & 
-
+servedocs: docs
+	bash -c 'curl -s "http://localhost:8118/build/" >/dev/null || (cd "$(TOP)/doc" && python -m SimpleHTTPServer 8118 &)'
+	@echo "python simpleserver running"
+	open "http://localhost:8118/build"
 
 examples:
 	@echo "building example xpis and symlinking them to data/example_extensions"
