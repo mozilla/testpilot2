@@ -1,0 +1,111 @@
+<html>
+<head>
+
+<!-- templates -->
+<script id="experiment_tpl" type="text/html">
+<tr id='study-{{id}}'>
+    <td><img src="{{image}}" width=100 height=100 /></td>
+    <td><p>{{summary}}</p>
+        <p>{{moreinfo}}</p>
+    </td>
+    <td>
+    <td>{{status}}</td>  <!-- TODO make this a controller -->
+    <td><a href="showdata.html/#study-{{id}}">show data</a></td>
+</tr>
+</script>
+
+<script id="simplesurvey_tpl" type="text/html">
+<tr id='study-{{id}}'>
+    <td><img src="{{image}}" width=100 height=100 /></td>
+    <td><p>{{summary}}</p>
+        <p>{{moreinfo}}</p>
+    </td>
+    <td>
+    <td>{{status}}</td>  <!-- TODO make this a controller -->
+    <td><a href="{{url}}">take survey!</a></td>
+</tr>
+</script>
+
+<script src="js/jquery.min.js"></script>
+
+<script>
+</script>
+
+</head>
+<body>
+
+<h1>Test Pilot</h1>
+
+
+<h2>Experiments</h2>
+<table id="experiments">
+</table>
+
+<h2>Surveys<h2>
+<table id="simplesurveys">
+</table>
+
+
+
+<h2>Configure Test Pilot</h2>
+<div id="settings">
+
+<form id='testpilotpreferences' class='preferences'>
+  <fieldset>
+    <legend>Data Submission</legend>
+    <label>Data Submission</label>
+    <input type="checkbox" label="&testpilot.settings.alwaysSubmitData.label;"
+              preference="always-submit-data"/>
+    </legend>
+  </fieldset>
+  <fieldset>
+    <legend>Tell me when:</legend>
+    <caption label="&testpilot.settings.notifications.label;" />
+    <label value="&testpilot.settings.notifyWhen.label;"/>Interrupt Me When</label>
+    <input type="checkbox" label="&testpilot.settings.readyToSubmit.label;"
+              preference="notify-finished"/>
+    <input type="checkbox"  label="&testpilot.settings.newStudy.label;"
+              preference="notify-new"/>
+    <input type="checkbox" label="&testpilot.settings.hasNewResults.label;"
+              preference="notify-results"/>
+    </legend>
+  </fieldset>
+</form>
+</div>
+
+
+<h2>Get Involved!</h2>
+<div id="complaints">
+<p>File bugs at:
+  <ul>
+    <li><a href="https://bugzilla.mozilla.org/enter_bug.cgi?alias=&assigned_to=glind%40mozilla.com&blocked=&bug_file_loc=http%3A%2F%2F&bug_severity=normal&bug_status=NEW&cc=jdicarlo%40mozilla.com&cf_crash_signature=&comment=&component=Test%20Pilot&contenttypeentry=&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&data=&defined_groups=1&dependson=&description=&flag_type-325=X&flag_type-37=X&flag_type-4=X&flag_type-607=X&flag_type-720=X&flag_type-721=X&flag_type-737=X&form_name=enter_bug&keywords=&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=All&priority=--&product=Mozilla%20Labs&qa_contact=test-pilot%40mozilla-labs.bugs&rep_platform=All&requestee_type-325=&requestee_type-4=&requestee_type-446=&requestee_type-607=&short_desc=&status_whiteboard=&target_milestone=---&version=unspecified">bugzilla</a></li>
+    <li><a href="">github</a></li>
+    <li>Or <a href="">email directly</a></li>
+  </ul>
+</p>
+
+<p>Track active development at <a href="">github</a></p>
+
+</div>
+
+<div>
+<p><a href="">Mozilla User Research and User Experience Blog</a></p>
+
+<p>Credits:  Gregg Lind, Jono Xia, Ilana Segall and others</p>
+</div>
+
+<h2>Legal and Privacy</h2>
+<div id="legal">
+We believe in your rights and your freedoms.  See <a href="">privacy and security</a>
+</div>
+
+
+<div id="debug">
+<h2> Debug </h2>
+
+<p>(<a href="debug.html">sooper sekrit debug page</a>, only visible here if a config setting is set)</p>
+</div>
+
+</body>
+</html>
+

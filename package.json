@@ -5,5 +5,12 @@
     "version": "2.0", 
     "fullName": "testpilot2", 
     "id": "testpilot2@mozilla.org",
-    "description": "run interface studies, surveys, etc."
+    "description": "run interface studies, surveys, etc.",
+     "preferences": [{
+        "name": "somePreference",
+        "title": "Some preference title",
+        "description": "Some short description for the preference",
+        "type": "string",
+        "value": "this is the default string value"
+    }]
 }
