@@ -7,6 +7,7 @@ assume:
 jquery, underscore, iCanHaz.js
 */
 
+
 $(function() {
     self.port.on('populatestudies', function(studies){
         var experiments = $("#experiments");
@@ -25,18 +26,20 @@ $(function() {
 });
 
 
+
 $(function() {
     self.port.on('datafromstudy', function(studyid,data){
-        var that = $("#collecteddata");
+        var that = $("#recordeddata");
         that.empty();
         that.append('<p>data for study: ' + studyid + '</p>');
         that.append('<p>here is the data...</p>');
     });
 });
 
+/*
 
 $(function(){
-    self.emit("selfmessage","from the contentscript");
+    self.port.emit("selfmessage","from the contentscript");
 });
 
 
@@ -46,4 +49,5 @@ $(function() {
     });
     window.alert("saw the message");
 });
+*/
 
