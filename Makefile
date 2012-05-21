@@ -45,6 +45,9 @@ examples:
 	done
 	@cd $(TOP)/data/example && ln -fs ../../example_studies/example.json .
 
-build:  js
+submodules:
+	git submodule foreach git pull
+
+build:  js submodules
 	@echo "run cfx xpi ; cfx run  or cfx --help"
 
