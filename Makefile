@@ -25,7 +25,7 @@ js:
 	curl -L http://documentcloud.github.com/underscore/underscore-min.js  -o $(TOP)/data/js/underscore_min.js
 	curl -L http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js -o $(TOP)/data/js/jquery.min.js
 	# extra modules
-	curl -L https://bitbucket.org/julianceballos/sqlite-jetpack/raw/tip/sqlite.js -o $(TOP)/lib/sqlite.js
+	curl -L https://raw.github.com/julianceballos/sqlite-jetpack/master/sqlite.js -o $(TOP)/lib/sqlite.js
 
 docs:
 	@cd doc && rm -rf build  && d
@@ -37,7 +37,7 @@ servedocs: docs
 	open "http://localhost:8118/build/"
 
 examples:
-	@echo "building example xpis and symlinking them to data/example_extensions"
+	@echo "building example xpis and symlinking them to example_studies"
 	@mkdir -p $(TOP)/data/example
 	@for p in $(EXAMPLE_XPIS); do \
 		cd $(TOP)/example_studies/$$p && cfx xpi && cd $(TOP) && \
@@ -46,7 +46,7 @@ examples:
 	@cd $(TOP)/data/example && ln -fs ../../example_studies/example.json .
 
 submodules:
-	git submodule foreach git pull
+	git submodule init && git submodule update
 
 build:  js submodules
 	@echo "run cfx xpi ; cfx run  or cfx --help"
