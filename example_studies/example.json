@@ -1,14 +1,14 @@
 {
     "experiments": [
         {"id": "heartbeat",
-         "addons": ["example/heartbeat.xpi"],
+         "addons": [{"url":"example/heartbeat.xpi"}],
          "duration": 10,
          "summary":  "this is the heartbeat study",
          "observe": ["heartbeat"],
          "phonehome": "http://some.example.com/url/heartbeat"
         },
         {"id": "foursearches",
-         "addons": ["example/foursearches.xpi"],
+         "addons": [{"url":"example/foursearches.xpi"}],
          "duration": 100,
          "summary":  "four kinds of searches",
          "observe": ["foursearches"],

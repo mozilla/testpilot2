@@ -1,16 +1,42 @@
 {
-    "name": "testpilot2", 
-    "license": "MPL 2.0", 
-    "author": "Gregg Lind <gregg.lind@mozilla.com>", 
-    "version": "2.0", 
-    "fullName": "testpilot2", 
-    "id": "testpilot2@mozilla.org",
-    "description": "run interface studies, surveys, etc.",
-     "preferences": [{
-        "name": "somePreference",
-        "title": "Some preference title",
-        "description": "Some short description for the preference",
-        "type": "string",
-        "value": "this is the default string value"
-    }]
+   "name":"testpilot2",
+   "license":"MPL 2.0",
+   "author":"Gregg Lind <gregg.lind@mozilla.com>",
+   "version":"2.0",
+   "fullName":"Test Pilot",
+   "id":"testpilot2@mozilla.org",
+   "description":"run interface studies, surveys, etc.",
+   "preferences":[
+      {
+         "title":"Upload (post) url for collected data",
+         "description": "see format at http://some/help/url",
+         "name":"uploadurl",
+         "type":"string",
+         "value":"http://localhost:5000/"
+      },
+      {
+         "title":"URL of study listings (index.json)",
+         "name":"indexurl",
+         "type":"string",
+         "value":""
+      },
+      {
+         "title":"Test Pilot Help URL",
+         "name":"helpurl",
+         "type":"string",
+         "value":"http://testpilot.mozillalabs.com"
+      },
+      {
+         "title":"Redownload study interval",
+         "name":"indexinterval",
+         "value":86400,
+         "type":"integer"
+      },
+      {
+         "title":  "Timestamp of last study listings",
+         "name":"indextimestamp",
+         "type":"string",
+         "value":"0"
+      }
+   ]
 }
