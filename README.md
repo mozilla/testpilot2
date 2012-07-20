@@ -5,23 +5,22 @@
 Restartless add-on version of Test Pilot (https://testpilot.mozillalabs.com/)
 with more features and a simpler api.
 
-See `docs/` for more info!
+See `doc/` for more info!
 
 ## install ##
 
 1. use the mozilla addon-sdk (also known as jetpack):  
-   
+
    * https://addons.mozilla.org/en-US/developers/docs/sdk/latest/
    * https://wiki.mozilla.org/Labs/Jetpack
 
 2. (link in the `cfx` binary to your path somewheres :p)
 3. fork and clone
-4. cfx run
 
 To see it in action:
 
-    make prep
-    cfx run    
+    make build
+    cfx run
 
 ## dev ##
 
@@ -39,11 +38,11 @@ please use git flow like workflow:
 
 To setup build:
 
-    `pip install -f requirements-build.txt`
+    `pip install -r requirements-build.txt`
 
 ## test ##
 
-    cfx test          
+    cfx test
 
 ## bugs, feature requests ##
 
