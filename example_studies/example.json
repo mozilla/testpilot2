@@ -13,7 +13,20 @@
          "summary":  "four kinds of searches",
          "observe": ["foursearches"],
          "phonehome": "http://some.example.com/url/foursearches"
-        }
+        },
+        {"id": "newtab and home",
+         "duration": 86400,
+         "summary": "understand the newtab and home pages",
+         "eventselectors": [
+            {"pages": ["about:home"], "selectors":["#searchbox"], "events":[]},
+            {"pages": ["about:newtab"], "selectors":["html"],"events":[]}
+         ]},
+        {"id": "everything",
+         "duration": 3600,
+         "summary": "everything!",
+         "eventselectors": [
+            {"pages": ["*"], "selectors":["html"], "events":[]}
+         ]}
     ],
     "simplesurveys": [
         {"id":  "newtestpilotsurvey",
