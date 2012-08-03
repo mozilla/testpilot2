@@ -1,5 +1,4 @@
-{
-   "name":"testpilot2",
+{  "name":"testpilot2",
    "license":"MPL 2.0",
    "author":"Gregg Lind <gregg.lind@mozilla.com>",
    "version":"2.0",
@@ -15,7 +14,7 @@
          "value":"http://localhost:5000/"
       },
       {
-         "title":"URL of study listings (index.json)",
+         "title":"url for study parameters",
          "name":"indexurl",
          "type":"string",
          "value":""
@@ -29,7 +28,7 @@
       {
          "title":"Redownload study interval",
          "name":"indexinterval",
-         "value":86400,
+         "value":86400000,
          "type":"integer"
       },
       {
@@ -37,6 +36,25 @@
          "name":"indextimestamp",
          "type":"string",
          "value":"0"
+      },
+      {
+          "type": "control",
+          "label": "scratchpad",
+          "name": "interactivedebug",
+          "title": "Interactive Debug"
+      },
+      {
+          "type": "control",
+          "label": "studies",
+          "name": "liststudies",
+          "title": "Show Studies"
+      },
+      {
+          "type": "control",
+          "label": "reload",
+          "name": "reload",
+          "title": "Reload studies"
       }
    ]
 }
+
