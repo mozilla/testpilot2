@@ -9,7 +9,7 @@ See `doc/` for more info!
 
 ## install ##
 
-1. use the mozilla addon-sdk (also known as jetpack):  
+1. use the mozilla addon-sdk (also known as jetpack):
 
    * https://addons.mozilla.org/en-US/developers/docs/sdk/latest/
    * https://wiki.mozilla.org/Labs/Jetpack
@@ -31,9 +31,9 @@ please use git flow like workflow:
 * if you have bug, branch and pull
 
   $ git checkout -b 31_myfeature
-  $ # code, code, hack .... 
+  $ # code, code, hack ....
   $ git push -A upstream
- 
+
 * `brew install git-flow` can help.
 
 To setup build:
@@ -50,16 +50,16 @@ use github issues.  We don't have bugzilla integration running yet.
 
 ## inclusion ##
 
-Test Pilot needs your help as a champion, experimental subject, or coder.
+Test Pilot needs your help as a champion, experimenter, or coder.
 Whatever your background (nation, language, neurotypical status, physical
 ability, sex, gender, orientation, age), you are welcome, and will be
-treated profressionally, respected, and valued.   
+treated profressionally, respected, and valued.
 
 ## Awesome Ascii Logo ##
 
-    _____  ____  __  _____      ___   _   _     ___  _____     ___  
-     | |  | |_  ( (`  | |      | |_) | | | |   / / \  | |       ) ) 
-     |_|  |_|__ _)_)  |_|      |_|   |_| |_|__ \_\_/  |_|      /_/_ 
+    _____  ____  __  _____      ___   _   _     ___  _____     ___
+     | |  | |_  ( (`  | |      | |_) | | | |   / / \  | |       ) )
+     |_|  |_|__ _)_)  |_|      |_|   |_| |_|__ \_\_/  |_|      /_/_
 
 (http://patorjk.com/software/taag/)
 
