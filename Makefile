@@ -21,15 +21,16 @@ help:
 	@echo "$$HELPDOC"
 
 js:
-	curl -L https://github.com/andyet/ICanHaz.js/raw/master/ICanHaz.min.js -o $(TOP)/data/js/ICanHaz.min.js
-	curl -L http://documentcloud.github.com/underscore/underscore-min.js  -o $(TOP)/data/js/underscore_min.js
-	curl -L http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js -o $(TOP)/data/js/jquery.min.js
-	# extra modules
-	curl -L https://raw.github.com/julianceballos/sqlite-jetpack/master/sqlite.js -o $(TOP)/lib/sqlite.js
-
+	# (client libraries)
+	curl -sS -L https://github.com/andyet/ICanHaz.js/raw/master/ICanHaz.min.js -o $(TOP)/data/js/ICanHaz.min.js
+	curl -sS -L http://documentcloud.github.com/underscore/underscore-min.js  -o $(TOP)/data/js/underscore_min.js
+	curl -sS -L http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js -o $(TOP)/data/js/jquery.min.js
+	# (addon libraries)
+	curl -sS -L https://raw.github.com/julianceballos/sqlite-jetpack/master/sqlite.js -o $(TOP)/lib/sqlite.js
+	curl -sS -L https://raw.github.com/Gozala/scratch-kit/master/scratchpad.js -o $(TOP)/lib/scratchpad.js
 docs:
-	@cd doc && rm -rf build  && d
-	@echo "docs at doc/build"
+	@cd $(TOP)/doc && rm -rf build
+	@d && echo "docs at doc/build"  ||  echo "pip install -r requirements-build.txt  # doc requirement"
 
 servedocs: docs
 	bash -c 'curl -s "http://localhost:8118/build/" >/dev/null || (cd "$(TOP)/doc" && python -m SimpleHTTPServer 8118 &)'
