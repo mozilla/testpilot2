@@ -19,7 +19,7 @@ See `doc/` for more info!
 
 To see it in action:
 
-    make build
+    make build  # get js, submodules
     cfx run
 
 ## dev ##

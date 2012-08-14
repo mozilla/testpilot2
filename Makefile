@@ -12,12 +12,12 @@ EXAMPLE_XPIS = heartbeat foursearches
 # see http://stackoverflow.com/questions/649246/is-it-possible-to-create-a-multi-line-string-variable-in-a-makefile
 define HELPDOC
 
-  build 	- does the prep work.  call this before `cfx xpi` or friends.
-  docs    -  build docs, usind `d`
-  servedocs - serve the built docs at 8118
-  examples - build example studies, useful for demoing
-  js - get ui and extra jetpack modules
-  help -  this help.
+  build 	- prep js and submodules.  REQUIRED before `cfx xpi`, `cfx run`
+  docs      - build docs, usind `d`
+  servedocs - serve the built docs at http://localhost:8118/
+  examples  - build example studies, useful for demoing
+  js        - get ui and extra jetpack modules
+  help      - this help.
 
 Note:  some targets are in the make file, some stuff is in `cfx`
 
