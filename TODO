@@ -1,0 +1,19 @@
+Punch list
+==============
+
+V1:
+
+* makefile
+* prefs
+* install binary
+* ux basics, as tab in data/ui
+* notifications, crib from panel as straw?
+* git clone -r # get submodules
+* tests?
+* simple negotiated config
+
+v2:
+
+* arms and conditions
+* retry for tasks... last status
+
