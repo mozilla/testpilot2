@@ -17,13 +17,7 @@
          "title":"url for study parameters",
          "name":"indexurl",
          "type":"string",
-         "value":""
-      },
-      {
-         "title":"Test Pilot Help URL",
-         "name":"helpurl",
-         "type":"string",
-         "value":"http://testpilot.mozillalabs.com"
+         "value":"http://testpilot-dev.mozillalabs.com/studies/studies.json"
       },
       {
          "title":"Redownload study interval",
@@ -36,6 +30,12 @@
          "name":"indextimestamp",
          "type":"string",
          "value":"0"
+      },
+      {
+         "title":"Test Pilot Help",
+         "name":"openhelp",
+         "type":"control",
+         "label":"Help"
       },
       {
           "type": "control",
@@ -54,6 +54,12 @@
           "label": "reload",
           "name": "reload",
           "title": "Reload studies"
+      },
+      {
+         "title":"upload data automatically",
+         "name":"uploadwithoutprompting",
+         "type":"bool",
+         "value": false
       }
    ]
 }

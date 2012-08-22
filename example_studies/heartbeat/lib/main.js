@@ -4,10 +4,10 @@
 
 const observer = require("observer-service");
 const timers = require("timers");
-var interval = 10000;  // in ms
+var interval = 4000;  // in ms
 
 
-/* 
+/*
 discussion:
 
 if one really wanted to measure life and death of the browser it would be
