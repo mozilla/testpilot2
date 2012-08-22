@@ -54,6 +54,12 @@
           "label": "reload",
           "name": "reload",
           "title": "Reload studies"
+      },
+      {
+         "title":"upload data automatically",
+         "name":"uploadwithoutprompting",
+         "type":"bool",
+         "value": false
       }
    ]
 }
