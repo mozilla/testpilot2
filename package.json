@@ -32,6 +32,12 @@
          "value":"0"
       },
       {
+         "title":"Test Pilot Help",
+         "name":"openhelp",
+         "type":"control",
+         "label":"Help"
+      },
+      {
           "type": "control",
           "label": "scratchpad",
           "name": "interactivedebug",
