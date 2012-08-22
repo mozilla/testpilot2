@@ -17,13 +17,7 @@
          "title":"url for study parameters",
          "name":"indexurl",
          "type":"string",
-         "value":""
-      },
-      {
-         "title":"Test Pilot Help URL",
-         "name":"helpurl",
-         "type":"string",
-         "value":"http://testpilot.mozillalabs.com"
+         "value":"http://testpilot-dev.mozillalabs.com/studies/studies.json"
       },
       {
          "title":"Redownload study interval",
