@@ -1,6 +1,6 @@
 [
     {"id": "heartbeat",
-     "addons": [{"url":"example/heartbeat.xpi"}],
+     "addons": [{"url":"+example/heartbeat.xpi"}],
      "duration": 10,
      "studytype": "experiment",
      "summary":  "this is the heartbeat study",
@@ -8,7 +8,7 @@
      "phonehome": "http://some.example.com/url/heartbeat"
     },
     {"id": "foursearches",
-     "addons": [{"url":"example/foursearches.xpi"}],
+     "addons": [{"url":"+example/foursearches.xpi"}],
      "duration": 100,
      "studytype": "experiment",
      "summary":  "four kinds of searches",
