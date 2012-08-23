@@ -40,7 +40,7 @@ Interactive Debug:
 please use git flow like workflow:
 
 * `master` is always good
-* `dev` is the leading edge
+* `develop` is the leading edge
 * if you have bug, branch and pull
 
   $ git checkout -b 31_myfeature
