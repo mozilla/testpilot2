@@ -17,12 +17,12 @@
          "title":"url for study parameters",
          "name":"indexurl",
          "type":"string",
-         "value":"http://testpilot-dev.mozillalabs.com/studies/studies.json"
+         "value":"http://testpilot-dev.mozillalabs.com/studies.json"
       },
       {
          "title":"Redownload study interval",
          "name":"indexinterval",
-         "value":86400000,
+         "value":3600000,
          "type":"integer"
       },
       {
