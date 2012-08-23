@@ -41,7 +41,10 @@ $(function() {
 
 
 $(function(){
-
+    // build info
+    self.port.on('buildversion',function(buildinfostring){
+        $('#buildversion').text(buildinfostring);
+    })
 });
 /*
 

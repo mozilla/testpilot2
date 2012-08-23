@@ -9,6 +9,8 @@ TOP ?= $(shell pwd)
 
 EXAMPLE_XPIS = heartbeat foursearches
 
+BUILDVERSION ?= $(shell git log -n1 --no-decorate --format="%h :: %s :: %aN" | python -c "import json,sys; sys.stdout.write(json.dumps(sys.stdin.read().strip()))")
+
 # see http://stackoverflow.com/questions/649246/is-it-possible-to-create-a-multi-line-string-variable-in-a-makefile
 define HELPDOC
 
@@ -35,6 +37,7 @@ js:
 	# (addon libraries)
 	curl -sS -L https://raw.github.com/julianceballos/sqlite-jetpack/master/sqlite.js -o $(TOP)/lib/sqlite.js
 	curl -sS -L https://raw.github.com/Gozala/scratch-kit/master/scratchpad.js -o $(TOP)/lib/scratchpad.js
+
 docs:
 	@cd $(TOP)/doc && rm -rf build
 	@d && echo "docs at doc/build"  ||  echo "pip install -r requirements-build.txt  # doc requirement"
@@ -59,3 +62,5 @@ submodules:
 build:  js submodules
 	@echo "run cfx xpi ; cfx run  or cfx --help"
 
+xpi:
+	cfx xpi --static-args '{"prefs":{"+buildversion": "'${BUILDVERSION}'" }}'
