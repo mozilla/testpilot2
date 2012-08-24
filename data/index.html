@@ -1,66 +1,103 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   - You can obtain one at http://mozilla.org/MPL/2.0/.  -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Test Pilot</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
-<style>
-iframe#uxblog {
-    width:100%;
-    height: 400;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
+  <style>
+  iframe#uxblog {
+      width:100%;
+      height: 400;
+      overflow-y: scroll;
+      overflow-x: hidden;
+  }
+  #content {
+    margin-top: 50px;
+  }
+  .brand {
+    font-weight: bold;
+  }
+  .survey-view,
+  .experiment-view {
+    margin: 20px 0;
+  }
+  .survey-view img,
+  .experiment-view img {
+    width: 100px;
+    height: 100px;
+  }
+  .footer {
+    text-align: center;
+    color: #999;
+    padding: 40px 0;
+    margin-top: 40px;
+    border-top: 1px solid #aaa;
+    background-color: #ddd;
+  }
+  </style>
 
-td {
-  border: 1px solid #ccc;
-}
+  <script type="text/template" id="experiment-template">
+    <div class="span2"><img src="<%= image %>"/></div>
+    <div class="span6">
+      <p><%= summary %></p>
+      <p><%= info %></p>
+    </div>
+    <div class="status span2">
+      <p><%= status %></p>
+      <div><a class="btn" href="showdata.html#study-<%= id %>">show data</a></div>
+    </div>
+  </script>
 
-tr {
-  border: 1px solid #aaa;
-}
-</style>
-<!-- templates -->
-<script id="experiment_tpl" type="text/html">
-<tr id='study-{{id}}'>
-    <td><img src="{{image}}" width=100 height=100 /></td>
-    <td><p>{{summary}}</p>
-        <p>{{moreinfo}}</p>
-    </td>
-    <td>
-    <td>{{status}}</td>  <!-- TODO make this a controller -->
-    <td><a href="showdata.html/#study-{{id}}">show data</a></td>
-</tr>
-</script>
+  <script type="text/template" id="survey-template">
+    <div class="span2"><img src="<%= image %>"/></div>
+    <div class="span6">
+      <p><%= summary %></p>
+      <p><%= info %></p>
+    </div>
+    <div class="status span2">
+      <p><%= status %></p>
+      <div><a class="btn" href="<%= url %>">take survey!</a></div>
+    </div>
+    </tr>
+    </table>
+  </script>
 
-<script id="simplesurvey_tpl" type="text/html">
-<tr id='study-{{id}}'>
-    <td><img src="{{image}}" width=100 height=100 /></td>
-    <td><p>{{summary}}</p>
-        <p>{{moreinfo}}</p>
-    </td>
-    <td>
-    <td>{{status}}</td>  <!-- TODO make this a controller -->
-    <td><a href="{{url}}">take survey!</a></td>
-</tr>
-</script>
-
-<script src="js/jquery.min.js"></script>
-
-<script>
-</script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/underscore.js"></script>
+  <script type="text/javascript" src="js/backbone.js"></script>
+  <script type="text/javascript" src="js/contentscript.js"></script>
 
 </head>
 <body>
 
-<h1>Test Pilot</h1>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="brand">Test Pilot</span>
+      </div>
+    </div>
+  </div>
 
+  <div id="content" class="container">
+    <div class="row">
+      <div class="span12">
+        <h2>Experiments</h2>
+        <ul id="experiments" class="unstyled span12"></ul>
+      </div>
+    </div>
 
-<h2>Experiments</h2>
-<table id="experiments">
-</table>
-
-<h2>Surveys<h2>
-<table id="simplesurveys">
-</table>
+    <div class="row">
+      <div class="span12">
+        <h2>Surveys</h2>
+        <ul id="simplesurveys" class="unstyled span12"></ul>
+      </div>
+    </div>
 
 
 <!--
@@ -89,43 +126,47 @@ tr {
 -->
 
 
-<h2>Get Involved!</h2>
-<div id="complaints">
-<p>File bugs at:
-  <ul>
-    <li><a href="https://bugzilla.mozilla.org/enter_bug.cgi?alias=&assigned_to=glind%40mozilla.com&blocked=&bug_file_loc=http%3A%2F%2F&bug_severity=normal&bug_status=NEW&cc=jdicarlo%40mozilla.com&cf_crash_signature=&comment=&component=Test%20Pilot&contenttypeentry=&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&data=&defined_groups=1&dependson=&description=&flag_type-325=X&flag_type-37=X&flag_type-4=X&flag_type-607=X&flag_type-720=X&flag_type-721=X&flag_type-737=X&form_name=enter_bug&keywords=&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=All&priority=--&product=Mozilla%20Labs&qa_contact=test-pilot%40mozilla-labs.bugs&rep_platform=All&requestee_type-325=&requestee_type-4=&requestee_type-446=&requestee_type-607=&short_desc=&status_whiteboard=&target_milestone=---&version=unspecified">bugzilla</a></li>
-    <li><a href="https://github.com/mozilla/testpilot2/issues">github</a></li>
-    <li>Or <a href="">email directly</a></li>
-  </ul>
-</p>
+  <h2>Get Involved!</h2>
+  <div id="complaints">
+    <p>File bugs at:
+      <ul>
+        <li><a href="https://bugzilla.mozilla.org/enter_bug.cgi?alias=&assigned_to=glind%40mozilla.com&blocked=&bug_file_loc=http%3A%2F%2F&bug_severity=normal&bug_status=NEW&cc=jdicarlo%40mozilla.com&cf_crash_signature=&comment=&component=Test%20Pilot&contenttypeentry=&contenttypemethod=autodetect&contenttypeselection=text%2Fplain&data=&defined_groups=1&dependson=&description=&flag_type-325=X&flag_type-37=X&flag_type-4=X&flag_type-607=X&flag_type-720=X&flag_type-721=X&flag_type-737=X&form_name=enter_bug&keywords=&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=All&priority=--&product=Mozilla%20Labs&qa_contact=test-pilot%40mozilla-labs.bugs&rep_platform=All&requestee_type-325=&requestee_type-4=&requestee_type-446=&requestee_type-607=&short_desc=&status_whiteboard=&target_milestone=---&version=unspecified">bugzilla</a></li>
+        <li><a href="https://github.com/mozilla/testpilot2/issues">github</a></li>
+        <li>Or <a href="">email directly</a></li>
+      </ul>
+    </p>
 
-<p><a href="https://github.com/mozilla/testpilot2">Track active development on github</a></p>
+    <p><a href="https://github.com/mozilla/testpilot2">Track active development on github</a></p>
+
+  </div>
+
+  <div>
+    <p><a href="https://blog.mozilla.org/ux/">Mozilla User Research and User Experience Blog</a></p>
+    <iframe id="uxblog" src="https://blog.mozilla.org/ux/feed/"></iframe>
+
+    <p>Credits:  Gregg Lind, Ilana Segall, Jono Xia, and others</p>
+  </div>
+
+  <h2>Legal and Privacy</h2>
+  <div id="legal">
+    We believe in your rights and your freedoms.  See <a href="">privacy and security</a>
+  </div>
+
+  <div id="debug">
+    <h2> Debug </h2>
+
+    <p><code>about:addons &gt; (Test Pilot 2) &gt; preferences</code></p>
+
+    <p>build info:  <code id="buildversion"></code></p>
+
+  </div>
 
 </div>
 
-<div>
-<p><a href="https://blog.mozilla.org/ux/">Mozilla User Research and User Experience Blog</a></p>
- <iframe id="uxblog" src="https://blog.mozilla.org/ux/feed/"></iframe>
-
-<p>Credits:  Gregg Lind, Ilana Segall, Jono Xia, and others</p>
-</div>
-
-<h2>Legal and Privacy</h2>
-<div id="legal">
-We believe in your rights and your freedoms.  See <a href="">privacy and security</a>
-</div>
-
-
-<div id="debug">
-<h2> Debug </h2>
-
-<p><code>about:addons &gt; (Test Pilot 2) &gt; preferences</code></p>
-
-<p>build info:  <code id="buildversion"></code></p>
-
-
-</div>
-
+<footer class="footer">
+  <!-- feel free to move more things down here if it makes sense -->
+  <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+</footer>
 </body>
 </html>
 
