@@ -1,20 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   - You can obtain one at http://mozilla.org/MPL/2.0/.  -->
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Test Pilot : Data</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <style>
+  #content {
+    margin-top: 50px;
+  }
+  .brand {
+    font-weight: bold;
+  }
+  </style>
+
 </head>
 <body>
-<div id="recordeddata">
-</div>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="brand">Test Pilot : Data</span>
+      </div>
+    </div>
+  </div>
 
-<p><a href="index.html">back to studies</a></p>
-<pre id='showdata'>
-</pre>
+  <div id="content" class="container">
+    <div id="recordeddata">
+    </div>
 
-<p><button id="delete" style="background-image: img/home_quit.png">delete all data for this study</button></p>
+    <p><a class="btn" href="index.html"><i class="icon-arrow-left"></i> back to studies</a></p>
+    <pre id='showdata'></pre>
 
-	<script src="js/jquery.min.js"></script>
-	<script>
-
-	</script>
+    <p><button class="btn" id="delete"><i class="icon-trash"></i> delete all data for this study</button></p>
 
 </body>
 </html>
