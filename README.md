@@ -59,7 +59,7 @@ To setup build:
 
 ## bugs, feature requests ##
 
-use github issues.  We don't have bugzilla integration running yet.
+use <a href="https://github.com/mozilla/testpilot2/issues">github issues</a>.  We don't have bugzilla integration running yet.
 
 ## inclusion ##
 
