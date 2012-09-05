@@ -1,3 +1,0 @@
-[submodule "packages/addonprovider"]
-	path = packages/addonprovider
-	url = https://github.com/erikvold/addonprovider-jplib
