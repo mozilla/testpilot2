@@ -30,7 +30,7 @@ def mkdir_p(path):
 
 t = """
 "use strict";
-const main = require("{mname}");
+const {munder} = require("{mname}");
 
 exports["test_test_run_{mname}"] = function(test) {{
   test.pass("Unit test {mname} running!");
@@ -39,7 +39,7 @@ exports["test_test_run_{mname}"] = function(test) {{
 """
 
 t2 = """
-exports.{functionname} = function(test){{
+exports.test_{functionname} = function(test){{
 	test.fail("TODO: write test for {functionname}");
 }};
 """
@@ -58,6 +58,7 @@ def main(filenames,check=False):
 		tmp = downone(x)
 		newpath = p.dirname(tmp)
 	 	mname = p.splitext(p.basename(tmp))[0]
+	 	munder = mname.replace("-","_")
 	 	tname = p.join('test', newpath, 'test-%s.js' % mname)
 		#print mname, tname
 

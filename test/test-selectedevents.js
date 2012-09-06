@@ -1,6 +1,6 @@
 
 "use strict";
-const main = require("selectedevents");
+const selectedevents = require("selectedevents");
 
 exports["test_test_run_selectedevents"] = function(test) {
   test.pass("Unit test selectedevents running!");
@@ -8,7 +8,7 @@ exports["test_test_run_selectedevents"] = function(test) {
 
 
 
-exports.EventSelector = function(test){
+exports.test_EventSelector = function(test){
 	test.fail("TODO: write test for EventSelector");
 };
 

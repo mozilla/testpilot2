@@ -1,6 +1,6 @@
 
 "use strict";
-const main = require("userpages");
+const userpages = require("userpages");
 
 exports["test_test_run_userpages"] = function(test) {
   test.pass("Unit test userpages running!");
@@ -8,27 +8,27 @@ exports["test_test_run_userpages"] = function(test) {
 
 
 
-exports.uipages = function(test){
+exports.test_uipages = function(test){
 	test.fail("TODO: write test for uipages");
 };
 
 
-exports.showdatapage = function(test){
+exports.test_showdatapage = function(test){
 	test.fail("TODO: write test for showdatapage");
 };
 
 
-exports.showdata = function(test){
+exports.test_showdata = function(test){
 	test.fail("TODO: write test for showdata");
 };
 
 
-exports.liststudies = function(test){
+exports.test_liststudies = function(test){
 	test.fail("TODO: write test for liststudies");
 };
 
 
-exports.more_info = function(test){
+exports.test_more_info = function(test){
 	test.fail("TODO: write test for more_info");
 };
 

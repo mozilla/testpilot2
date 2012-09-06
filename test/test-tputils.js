@@ -1,6 +1,6 @@
 
 "use strict";
-const main = require("tputils");
+const tputils = require("tputils");
 
 exports["test_test_run_tputils"] = function(test) {
   test.pass("Unit test tputils running!");
@@ -8,17 +8,17 @@ exports["test_test_run_tputils"] = function(test) {
 
 
 
-exports.codeok = function(test){
+exports.test_codeok = function(test){
 	test.fail("TODO: write test for codeok");
 };
 
 
-exports.In = function(test){
+exports.test_In = function(test){
 	test.fail("TODO: write test for In");
 };
 
 
-exports.urlize_addon_path = function(test){
+exports.test_urlize_addon_path = function(test){
 	test.fail("TODO: write test for urlize_addon_path");
 };
 
