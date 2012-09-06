@@ -1,0 +1,6 @@
+[submodule "sqlite-jetpack"]
+	path = sqlite-jetpack
+	url = https://github.com/julianceballos/sqlite-jetpack
+[submodule "packages/sqlite-jetpack"]
+	path = packages/sqlite-jetpack
+	url = https://github.com/julianceballos/sqlite-jetpack
