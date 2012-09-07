@@ -20,3 +20,5 @@ exports["test extensiontracker checks what is installed before allowing an unins
 exports["test okay to uninstall if it was yours and no one else needs it"] = function(assert){assert.fail("nope")};
 
 
+exports["test test all interactions are sealed against race conditions"] = function(assert){assert.fail("nope")};
+

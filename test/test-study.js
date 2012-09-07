@@ -27,3 +27,9 @@ exports.test_Study = function(test){
 	test.fail("TODO: write test for Study");
 };
 
+
+exports["test surveys exist"] = function(assert){assert.fail("nope")};
+
+exports["test experiments exist"] = function(assert){assert.fail("nope")};
+
+
