@@ -67,3 +67,7 @@ exports.test_AddonManager = function(test){
 	test.fail("TODO: write test for AddonManager");
 };
 
+
+exports["test can ask about more than one study at once.  notices queue"] = function(assert){assert.fail("nope")};
+
+

@@ -197,3 +197,6 @@ exports["test main with staticargs does stuff (debug, sets prefs, etc.)"] = func
   assert.fail("nope")
 };
 
+
+exports["test allow survey and experiment for same study"] = function(assert){assert.fail("nope")};
+
