@@ -1,3 +1,6 @@
-[submodule "packages/addonprovider"]
-	path = packages/addonprovider
-	url = https://github.com/erikvold/addonprovider-jplib
+[submodule "sqlite-jetpack"]
+	path = sqlite-jetpack
+	url = https://github.com/julianceballos/sqlite-jetpack
+[submodule "packages/sqlite-jetpack"]
+	path = packages/sqlite-jetpack
+	url = https://github.com/julianceballos/sqlite-jetpack

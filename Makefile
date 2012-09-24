@@ -39,8 +39,7 @@ js:
 	curl -sS -L https://raw.github.com/Gozala/scratch-kit/master/scratchpad.js -o $(TOP)/lib/scratchpad.js
 
 docs:
-	@cd $(TOP)/doc && rm -rf build
-	@d && echo "docs at doc/build"  ||  echo "pip install -r requirements-build.txt  # doc requirement"
+	@cd $(TOP)/doc && rm -rf build && d && echo "docs at doc/build"  ||  echo "pip install -r requirements-build.txt  # doc requirement"
 
 servedocs: docs
 	bash -c 'curl -s "http://localhost:8118/build/" >/dev/null || (cd "$(TOP)/doc" && python -m SimpleHTTPServer 8118 &)'
