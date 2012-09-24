@@ -1,42 +1,70 @@
 "use strict";
 
-exports.test_integration = function(assert){
+let {uu,fakestudy} = require('./tptestutils');
+let study = require('study');
+let {STATUS} = require('status');
+
+exports['test_integration'] = function(assert){
     assert.fail("should have integration testing");
 };
 
-
-exports["test new studies start at new"] = function(assert){
-  assert.fail("nope")
+exports["test new studies have no status, until set"] = function(assert){
+  let fake = fakestudy();
+  console.log('assertkeys:',Object.keys(assert))
+  console.log(JSON.stringify(fake.config,null,2))
+  assert.ok(fake.config.status === undefined);
 };
 
-exports["test ask install calls ask_install"] = function(assert){
-  assert.fail("nope")
+exports["test setting status to ASKINSTALL makes ui"] = function(assert){
+  let fake = fakestudy();
+  let id = fake.config.id;
+  fake.setStatus(STATUS.ASKINSTALL);
+  assert.ok(fake.activeui.length)
 };
 
-exports["test ask upload calls ask_upload"] = function(assert){
-  assert.fail("nope")
+
+exports["test setting status to ASKUPLOAD makes ui"] = function(assert){
+  let fake = fakestudy();
+  let id = fake.config.id;
+  fake.setStatus(STATUS.ASKUPLOAD);
+  assert.ok(fake.activeui.length)
 };
 
-exports["test ask install has ui"] = function(assert){
-  assert.fail("nope")
-};
 
-exports["test ask upload has ui"] = function(assert){
-  assert.fail("nope")
-};
+/*
+exports['test studies can observe channels'] = function(){
+  let id = uu()
+  let s = study.Study({id:uu(),observe=[id]});
+}
+
 
 exports["test observed channels cause watch call"] = function(assert){
   assert.fail("nope")
 };
 
+
 exports["test studies die at the end of their duration"] = function(assert){
+  let fake = fakestudy({duration: 0});
   assert.fail("nope")
 };
 
+*/
+
+/* not quite sure how to test this...
 exports["test status change (to various) kills ui"] = function(assert){
+  let fake = fakestudy();
+  let fakeui = {kill: function(){}};
+  for (let x in STATUS){
+    console.log('STATUS', x)
+    fake.activeui.add(fakeui);
+    fake.setStatus(STATUS[x]);
+    assert.ok(fake.activeui.length == 0, "status clearsui: " + STATUS[x])
+  }
   assert.fail("nope")
 };
+*/
 
+/*
 exports["test status change to collecting creates observers"] = function(assert){
   assert.fail("nope")
 };
@@ -49,7 +77,7 @@ exports["test survey studies call ask_survey"] = function(assert){
   assert.fail("nope")
 };
 
-exports["test when survey is complete, extensions are uninstalled"] = function(assert){
+exports["test when study is complete, extensions are uninstalled"] = function(assert){
   assert.fail("nope")
 };
 
@@ -199,4 +227,5 @@ exports["test main with staticargs does stuff (debug, sets prefs, etc.)"] = func
 
 
 exports["test allow survey and experiment for same study"] = function(assert){assert.fail("nope")};
-
+*/
+require('test').run(exports);
