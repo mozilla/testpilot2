@@ -1,0 +1,9 @@
+{
+  "name": "testpilot-utils",
+  "fullName": "testpilot-utils",
+  "description": "Test Pilot SDK development made easy",
+  "author": "Bryan Clark (http://clarkbw.net/)",
+  "license": "MPL 2.0",
+  "version": "0.1",
+  "dependencies": ["api-utils"]
+}
